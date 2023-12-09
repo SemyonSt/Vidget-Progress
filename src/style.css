@@ -1,21 +1,30 @@
-body {
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Medium.ttf");
+    font-weight: 400;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+    
+}
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(226, 230, 240);
     height: 100vh;
+    font-family:
 }
 
 .card {
     background-color: rgba(255, 255, 255, 0.966);
     width: 320px;
-    /* Установка ширины в 300 пикселей */
     height: 568px;
-    /* Установка высоты в 500 пикселей */
-
 
     display: flex;
     flex-direction: column;
@@ -26,10 +35,9 @@ body {
 }
 
 .progress {
-    position: absolute; /* Позиционирование */
-    top: 15px; /* Размещение вверху */
-    left: 15px; /* Размещение слева */
-    /* Остальные стили остаются без изменений */
+    position: absolute;
+    top: 15px;
+    left: 15px;
 }
 
 
@@ -65,14 +73,31 @@ body {
 
 /*----------------------------*/
 .input__value {
+    all: unset;
     border-radius: 30px;
     width: 54px;
     height: 30px;
     border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* уберем стрелки у ввода чисел */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Устранение стилей для Firefox */
 }
 
 /*----------------------------*/
+
+/*----------------------------*/
 .switch {
+
     position: relative;
     display: inline-block;
     width: 60px;
@@ -110,7 +135,7 @@ body {
 }
 
 input:checked+.slider {
-    background-color: #2196F3;
+    background-color: rgb(60, 60, 226);
 }
 
 input:checked+.slider:before {
@@ -140,31 +165,33 @@ input:checked+.slider:before {
     margin: auto;
 }
 
-/* .progress-ring__circle {
-    transition: stroke-dashoffset 0.35s;
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-    stroke: rgb(60, 60, 226);
-} */
-
 /* Установка размера круга и его обводки */
 .progress-ring__circle {
-  
-    /* Длина окружности круга (2 * π * r) */
-    /* Начальное значение смещения */
     transition: stroke-dashoffset 0.35s;
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
     stroke: rgb(60, 60, 226);
-    stroke-width:8;
+    stroke-width: 8;
     fill: transparent;
 }
-.background{
-    fill:none;
-    stroke:#eaeaea;
-    stroke-width:8;
-   
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
+
+.background {
+    fill: none;
+    stroke: #eaeaea;
+    stroke-width: 8;
+
+}
+
 /*рогресс бар----------------------*/
 
 
@@ -185,7 +212,7 @@ input:checked+.slider:before {
         margin-top: 0px;
         margin-left: 50px;
     }
-    
+
     .state {
         margin-bottom: 0px;
         margin-right: 50px;
