@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 230, 240);
+    height: 100vh;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.966);
+    width: 320px;
+    /* Установка ширины в 300 пикселей */
+    height: 568px;
+    /* Установка высоты в 500 пикселей */
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.progress {
+    position: absolute; /* Позиционирование */
+    top: 15px; /* Размещение вверху */
+    left: 15px; /* Размещение слева */
+    /* Остальные стили остаются без изменений */
+}
+
+
+.percent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    /* чтобы занимать всю высоту card */
+}
+
+.ring {
+    flex: 1;
+    /* равномерно распределить пространство между ring и state */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.state {
+    flex: 1;
+    /* равномерно распределить пространство между ring и state */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+/*----------------------------*/
+.input__value {
+    border-radius: 30px;
+    width: 54px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
+/*----------------------------*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/*----------------------------*/
+.state__1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.name {
+    margin-left: 20px;
+}
+
+
+/*рогресс бар----------------------*/
+.progress-ring {
+    display: block;
+    margin: auto;
+}
+
+/* .progress-ring__circle {
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke: rgb(60, 60, 226);
+} */
+
+/* Установка размера круга и его обводки */
+.progress-ring__circle {
+  
+    /* Длина окружности круга (2 * π * r) */
+    /* Начальное значение смещения */
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke: rgb(60, 60, 226);
+    stroke-width:8;
+    fill: transparent;
+}
+.background{
+    fill:none;
+    stroke:#eaeaea;
+    stroke-width:8;
+   
+}
+/*рогресс бар----------------------*/
+
+
+@media screen and (orientation: landscape) and (max-height: 568px) {
+    .card {
+        width: 568px;
+        height: 320px;
+    }
+
+    .percent {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .ring {
+
+        margin-top: 0px;
+        margin-left: 50px;
+    }
+    
+    .state {
+        margin-bottom: 0px;
+        margin-right: 50px;
+    }
+}
