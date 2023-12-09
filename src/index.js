@@ -12,8 +12,8 @@ circle.style.strokeDasharray = `${circumference} ${circumference}`;
 circle.style.strokeDashoffset = circumference;
 
 const setProgress = (percent) => {
-  if (Number.isNaN(percent)) { 
-    circle.style.strokeDashoffset = circumference; 
+  if (Number.isNaN(percent)) {
+    circle.style.strokeDashoffset = circumference;
     return;
   }
   const offset = circumference - (percent / 100) * circumference;
@@ -21,7 +21,16 @@ const setProgress = (percent) => {
 };
 
 inputValue.addEventListener('input', () => {
-  const value = parseInt(inputValue.value, 10);
+  let value = parseInt(inputValue.value, 10);
+
+  if (value > 100) {
+    inputValue.value = 100;
+    value = 100;
+  }
+  if (value < 0) {
+    inputValue.value = 0;
+    value = 0;
+  }
   setProgress(value);
 });
 
