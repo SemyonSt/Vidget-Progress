@@ -48,12 +48,10 @@ body {
     justify-content: center;
     text-align: center;
     height: 100%;
-    /* чтобы занимать всю высоту card */
 }
 
 .ring {
     flex: 1;
-    /* равномерно распределить пространство между ring и state */
     width: 100%;
     display: flex;
     align-items: center;
@@ -62,7 +60,6 @@ body {
 
 .state {
     flex: 1;
-    /* равномерно распределить пространство между ring и state */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -159,7 +156,7 @@ input:checked+.slider:before {
 }
 
 
-/*рогресс бар----------------------*/
+/*прогресс бар----------------------*/
 .progress-ring {
     display: block;
     margin: auto;
@@ -192,7 +189,7 @@ input:checked+.slider:before {
 
 }
 
-/*рогресс бар----------------------*/
+/*прогресс бар----------------------*/
 
 
 @media screen and (orientation: landscape) and (max-height: 568px) {
