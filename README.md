@@ -1,3 +1,4 @@
+[![Linter](https://github.com/SemyonSt/Vidjet-Progress/actions/workflows/Linter.yml/badge.svg)](https://github.com/SemyonSt/Vidjet-Progress/actions/workflows/Linter.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/70d59cb6a9825349bcda/maintainability)](https://codeclimate.com/github/SemyonSt/Vidjet-Progress/maintainability)
 
 ### Деплой: https://vidjet-progress.vercel.app/
