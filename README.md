@@ -1,5 +1,18 @@
 ### Деплой: https://vidjet-progress.vercel.app/
 
+**Install:**
+---
+
+```
+$ git clone git@github.com:SemyonSt/Vidjet-Progress.git
+
+$ make install
+
+$ sudo npm link
+
+$ make start
+```
+
 
 # Реализовать блок Progress
 ### Задача
