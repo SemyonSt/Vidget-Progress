@@ -8,6 +8,8 @@ const app = () => {
     circle: document.querySelector('.progress-ring__circle'),
   };
 
+  setProgress(elements, 0);
+
   elements.inputValue.addEventListener('input', () => {
     const value = parseInt(elements.inputValue.value, 10);
     setProgress(elements, value);
