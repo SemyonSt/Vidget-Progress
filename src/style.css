@@ -9,7 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', Arial, sans-serif;
-    
+
 }
 
 body {
@@ -18,7 +18,6 @@ body {
     align-items: center;
     background-color: rgb(226, 230, 240);
     height: 100vh;
-    font-family:
 }
 
 .card {
@@ -68,7 +67,7 @@ body {
     margin-bottom: 70px;
 }
 
-/*----------------------------*/
+
 .input__value {
     all: unset;
     border-radius: 30px;
@@ -90,9 +89,7 @@ input[type=number] {
     /* Устранение стилей для Firefox */
 }
 
-/*----------------------------*/
 
-/*----------------------------*/
 .switch {
 
     position: relative;
@@ -139,7 +136,6 @@ input:checked+.slider:before {
     transform: translateX(26px);
 }
 
-/*----------------------------*/
 .state__1 {
     display: flex;
     flex-direction: column;
@@ -156,13 +152,12 @@ input:checked+.slider:before {
 }
 
 
-/*прогресс бар----------------------*/
+/*---------progress bar--------*/
 .progress-ring {
     display: block;
     margin: auto;
 }
 
-/* Установка размера круга и его обводки */
 .progress-ring__circle {
     transition: stroke-dashoffset 0.35s;
     transform: rotate(-90deg);
@@ -189,10 +184,8 @@ input:checked+.slider:before {
 
 }
 
-/*прогресс бар----------------------*/
 
-
-@media screen and (orientation: landscape) and (max-height: 568px) {
+@media screen and (orientation: landscape) and (max-height: 570px) {
     .card {
         width: 568px;
         height: 320px;
